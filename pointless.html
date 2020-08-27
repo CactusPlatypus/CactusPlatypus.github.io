@@ -1,0 +1,92 @@
+<head>
+
+    <title> Frank Walker </title>
+
+    <style>
+
+
+    .center {
+    display: block;
+     margin-left: auto;
+    margin-right: auto;
+     width: 50%;
+    }
+
+
+    .rainbow-text {
+  background-image: linear-gradient(to left, black, black, black, black, black, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.background {
+  background-image: linear-gradient(to right, red, lightblue, lightgreen, orange, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+    </style>
+
+
+<script>
+
+var b = 0;
+
+function counter() {
+    var i = 0;
+    // This block will be executed 100 times.
+    setInterval(function(){
+        if (i == 100) clearInterval(this);
+        else console.log( 'Currently at ' + (i++) ), b = i, display();
+    }, 1000);
+
+
+} // End
+
+
+
+
+function display(){
+
+var displaytField = document.getElementById("display"); //find span
+
+displaytField.innerHTML = "You've been jamming with Frank Walker for " + b + " seconds"; //display message
+
+}
+
+
+counter();
+
+
+
+</script>
+    
+
+
+
+</head>
+
+<body class="background">
+
+    
+
+    <div>
+        
+        <h1 id="display" class ="rainbow-text" style= "text-align: center; vertical-align: sub;">You've been jamming with Frank Walker for 0 seconds</h1>
+
+    </div>
+   
+
+<audio autoplay loop preload >
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<img src="frank-walker.gif" class="center"/>
+
+
+
+</body>
